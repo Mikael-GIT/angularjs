@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="meuApp.js"></script>
+		<script src="controladores.js"></script>
+		<title>Página 30</title>
+	</head>
+
+	<body >
+		<h1>Filtros AngularJS</h1>
+        <div ng-app="meuApp" ng-controller="controladorDados">
+            <p>O nome é {{ nome | uppercase }} </p>
+            <p> O e-mail é {{ email | lowercase }} </p>
+        </div>
+
+	</body>
+</html>

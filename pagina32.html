@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="meuApp.js"></script>
+		<script src="controladores.js"></script>
+		<title>Página 32</title>
+	</head>
+
+	<body >
+		<h1>Filtros AngularJS</h1> 
+        <div ng-app ="meuApp" ng-controller="controladorProduto">
+            <p>Descrição do produto: {{ descricao }}</p>
+            <p>Preço em Dólar: {{ dolar | currency }}</p>
+            <p>Preço em Real: {{ real | currency: 'R$' }} </p>
+
+        </div>
+ 
+
+	</body>
+</html>

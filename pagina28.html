@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="meuApp.js"></script>
+		<script src="controladores.js"></script>
+		<title>Página 28</title>
+	</head>
+
+	<body>
+		<h1>Escopo AngularJS</h1>
+
+		<div ng-app="meuApp" ng-controller="controladorIdade">
+			<form>
+				<p><label for="nome">Nome:</label>
+				<input type="text" id="nome" ng-model="nome">
+				</p>
+
+				<p><label for="nasc">Ano de Nascimento:</label>
+				<input type="number" id="nasc" min="1900" max="2023" ng-model="nasc">
+				</p>
+
+				<p><label for="anoa">Ano Atual:</label>
+				<input type="text" id="anoa" readonly ng-model="anoa">
+				</p>
+				
+				<p>A idade aproximada de {{ nome }} é {{ calcularIdade() }} anos.</p>
+			</form>
+		</div>
+	</body>
+</html>

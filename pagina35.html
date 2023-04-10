@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="meuApp.js"></script>
+		<script src="controladores.js"></script>
+		<title>Página 35</title>
+	</head>
+
+	<body >
+		<h1>Filtros AngularJS</h1>
+        <div ng-app="meuApp" ng-controller="controladorAlunos" ng-init="tipo=''">
+
+
+            <table border>
+                <tr>
+                    <th ng-click="tipo='nome'">Aluno</th>
+                    <th ng-click="tipo='cidade'">Cidade</th>
+                </tr>
+
+                <tr ng-repeat="i in alunos | orderBy: tipo" >
+                    <td>{{ i.nome }}</td>
+                    <td>{{ i.cidade }}</td>
+                </tr>
+            </table>
+        </div>
+
+	</body>
+</html>

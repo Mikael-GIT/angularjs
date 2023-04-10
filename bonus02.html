@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="meuApp.js"></script>
+		<script src="controladores.js"></script>
+		<title>Bônus 02</title>
+	</head>
+
+	<body>
+		<h1>Escopo Raiz AngularJS</h1>
+
+		<div ng-app="meuApp" ng-controller="controladorIdade">
+			<p>O jovem programador de computadores <strong>{{ nome }}</strong> de apenas <strong>{{ calcularIdade() }} anos</strong> disse em entrevista que a sua linguagem de programação preferida é <strong>{{ linguagem1 }}</strong>, mas que também gosta de programar em <strong>{{ linguagem2 }}</strong>.</p>
+		</div>
+	</body>
+</html>

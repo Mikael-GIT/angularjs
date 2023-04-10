@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="meuApp.js"></script>
+		<script src="controladores.js"></script>
+		<title>Página 31</title>
+	</head>
+
+	<body >
+		<h1>Filtros AngularJS</h1>
+        <div ng-app="meuApp" ng-controller="controladorAlunos" ng-init="tipo=''">
+            <p><label for="tipo">Ordenar por:</label>
+                <select id="tipo" ng-model="tipo">
+                    <option value=""></option>
+                    <option value="nome">Nome</option>
+                    <option value="cidade">Cidade</option>
+                </select>
+            </p>
+
+            <table border>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Cidade</th>
+                </tr>
+
+                <tr ng-repeat="i in alunos | orderBy: tipo" >
+                    <td>{{ i.nome }}</td>
+                    <td>{{ i.cidade }}</td>
+                </tr>
+            </table>
+        </div>
+
+	</body>
+</html>
