@@ -8,3 +8,14 @@ app.controller("controladorDelta",
         }
 	}
 );
+
+app.controller("controladoraEsfera",
+	function ($scope) {
+        
+        $scope.calcularEsfera = function(){
+            $scope.comprimento = (2 * Math.PI * $scope.raio).toFixed(2);
+            $scope.area = (Math.PI * Math.pow($scope.raio, 2)).toFixed(2);
+            $scope.volume = (4/3 * Math.PI * Math.pow($scope.raio, 3)).toFixed(2);
+        }
+	}
+);
